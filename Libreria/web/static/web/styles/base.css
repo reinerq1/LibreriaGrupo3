@@ -1,0 +1,119 @@
+*{
+    color: #303030;
+    font-size: 15px;
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main, footer{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: #909090;
+    padding: 15px;
+    width: 100vw;
+    position: fixed;
+}
+
+.header_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    font-size: 25px;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.header_nav li{
+    background-color: #303030;
+    padding: 7.5px 15px; margin: 0px 10px;
+    border-radius: 10px;
+}
+
+header a{
+    color: white;
+}
+
+header .messages .success{
+    background-color: green;
+}
+
+h2{
+    font-size: 25px;
+    padding: 25px;
+}
+
+main{
+    flex: 1;
+    padding-top: 68px;
+}
+
+.index{
+    font-size: 50px;
+}
+
+.books{
+    background-color: #f0f0f0;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book{
+    background-color: white;
+    width: 225px;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+}
+
+img{
+    width: 100%;
+    height: 250px;
+}
+
+.bold{
+    font-weight: bold;
+    height: 46px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+
+
+
+
+
+footer{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    color: white;
+}
