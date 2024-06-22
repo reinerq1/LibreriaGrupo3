@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'web/styles/base.css' %}">
+    <title>{% block title %}{% endblock%}</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_nav">
+            <h1>LibreriaCAC</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                    <li><a href="{% url 'libros' %}">Libros</a></li>
+                    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages%}
+            <li {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+
+    </header>
+    <main>
+        {% block main%}{% endblock%}
+    </main>
+    <footer>
+        <p>LibreriaCAC - Todos los Derechos Reservados.</p>
+    </footer>
+</body>
+
+</html>

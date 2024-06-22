@@ -1,0 +1,11 @@
+{% extends "web/base.html" %}
+
+{% block title %}Contacto{% endblock%}
+{% block main %}
+<h2>Contacto</h2>
+<form method="POST" action="{% url 'contacto' %}">
+    {% csrf_token %}
+    {{ contato_forms.as_p }}
+    <input type="submit">
+</form>
+{% endblock%}

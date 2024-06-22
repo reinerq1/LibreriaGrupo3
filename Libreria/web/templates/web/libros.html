@@ -1,0 +1,24 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block title %}Libros{% endblock%}
+{% block main %}
+<h2>Libros</h2>
+<section class="books">
+    {% for libro in libros %}
+    <div class="book">
+        <img src="{% static libro.imagen %}" alt="Imagen de {{ libro.nombre }}">
+        <p>Nombre:</p>
+        <p class="bold">{{ libro.nombre }}</p>
+        <p>Autor:</p>
+        <p class="bold">{{ libro.autor }}</p>       
+        <p>Precio:</p>
+        <p class="bold">{{ libro.precio }}</p>
+    </div>
+    {% empty %}
+    <div>
+        <p>No hay libros cargados</p>
+    </div>
+    {% endfor %}
+</section>
+{% endblock%}
